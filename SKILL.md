@@ -1,11 +1,11 @@
 ---
-name: watch-video
-description: Watch and analyze a YouTube video or a local video file. Reads the actual frames and the audio, not just the transcript, and returns a scene-by-scene breakdown with timestamps, the transcript, the hook/turn/payoff structure, the pacing, and every on-screen caption. Use whenever I paste a video link or a video file and ask what happened, why it worked, or to turn it into a plan.
+name: video-summary
+description: Watch and analyze any video — a YouTube link or a local file. Reads the actual frames and audio, not just the transcript, and returns a scene-by-scene breakdown with timestamps, a full transcript, on-screen captions, structure, and pacing. Use whenever a video link or file path is given and the request is to understand, summarize, or break down what's in it.
 argument-hint: <youtube-url-or-file-path> [--clip 0:00-0:05] [--fps 8] [--prompt "..."]
 allowed-tools: Bash, Read
 ---
 
-# Watch Video
+# Video Summary
 
 Turn any YouTube link or local video file into a real breakdown: what is on screen, what is said, why it works, and how to use it.
 
@@ -33,7 +33,7 @@ Turn any YouTube link or local video file into a real breakdown: what is on scre
 3. Run it:
 
 ```bash
-python3 ~/.claude/skills/watch-video/watch_video.py "<source>" [flags]
+python3 ~/.claude/skills/video-summary/video_summary.py "<source>" [flags]
 ```
 
 4. Show me the report as it came back. Do not summarize it away, do not renumber or round the timestamps, and do not add anything the analysis did not actually return.

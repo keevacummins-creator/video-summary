@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-watch_video.py - let your AI watch a YouTube video or a local video file.
+video_summary.py - let your AI watch a YouTube video or a local video file.
 
 Usage:
-    python3 watch_video.py <youtube-url-or-file> [--prompt "..."] [--clip 0:00-0:05] [--fps N] [--model ...]
+    python3 video_summary.py <youtube-url-or-file> [--prompt "..."] [--clip 0:00-0:05] [--fps N] [--model ...]
 
 Env:
     GEMINI_API_KEY - required. Free key at https://aistudio.google.com/apikey
