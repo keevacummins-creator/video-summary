@@ -44,13 +44,17 @@ python3 ~/.claude/skills/video-summary/video_summary.py "<source>" [flags]
 
 ## Stage 2: the team brief
 
-Run this ONLY when I ask for something actionable. Trigger phrases: "ideas for my team", "what can we action", "bring back to the team", "what should we do with this", "team brief", "takeaways we can discuss". If I only asked what is in the video, stop after Stage 1.
+Run this whenever I send a video with any instruction beyond the bare link. If I say "summarise" plus anything else, or ask for takeaways, ideas, findings, or what to do with it, that is a Stage 2 request. Only a bare link with no other text stops at Stage 1.
 
-Before writing the brief, ask me two things if I have not already said them:
-- **Which team is this for**, and what do they own? Ideas for a demand gen team are different from ideas for a content or brand team.
-- **Why did I watch this?** A competitor teardown, a format I am considering, a conference talk, a customer story, or a campaign post-mortem all point at different actions.
+**Default context, assume this unless I say otherwise:**
+- **My team is demand gen**, covering ads, SEO, campaigns, B2B marketing, and AI tooling. Pitch ideas at someone who owns or influences those.
+- **I watch these to find things worth actioning**, so lead with what we could do, not with what the video contained.
 
-Do not guess these. A brief aimed at the wrong team is worse than no brief, because it wastes a meeting.
+Only ask me about team or purpose if the video is clearly outside that scope, for example a personal-brand or consumer video where demand gen framing would not make sense.
+
+**Always deliver in chat as structured markdown with tables.** Tables for anything comparative: the vendor or section rundown, each idea's detail, and what to skip. Prose only where a caveat needs explaining.
+
+**Always include these four, in this order:** the summary, key findings, takeaways, and ideas with why each one matters to me.
 
 ### Rules for the brief
 
