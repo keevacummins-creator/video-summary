@@ -74,6 +74,14 @@ Average seconds per cut, the total number of cuts, and where the pace changes.
 ## Key Moments
 Three to seven `[MM:SS] Description` bullets a viewer would actually remember.
 
+## Replicable Techniques
+Describe HOW the video was made, mechanically, so the techniques could be repeated. Stay descriptive, do not recommend anything here. Cover only what you can actually see or hear:
+- caption treatment: burned-in or platform, words per line, placement, when they appear relative to speech
+- shot construction: framing, camera movement, lighting, setting, whether it is a single take
+- editing: cut rhythm, b-roll usage, zooms or punch-ins and where they land
+- audio: music presence, whether speech is scripted or conversational, pace
+- any graphic, chart, screen recording, or product UI, and how long it holds on screen
+
 Be concrete. When you are unsure, say so. Reporting less with confidence beats reporting more with confabulation."""
 
 
