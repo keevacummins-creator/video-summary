@@ -11,6 +11,17 @@ Turn any YouTube link or local video file into a real breakdown: what is on scre
 
 This skill runs in two stages. Stage 1 observes and never infers. Stage 2 interprets, and only runs when asked. Keep them separate. Do not let Stage 2 reasoning leak into the Stage 1 report.
 
+## Configure this for you
+
+Edit the two lines below before using Stage 2 (the team brief). These are the only lines in this file meant to be personal, everything else applies to anyone.
+
+```
+MY_TEAM: demand gen, covering ads, SEO, campaigns, B2B marketing, and AI tooling
+MY_PURPOSE: find what's actionable from a video, not just understand it
+```
+
+If `MY_TEAM` is blank, or the video is clearly outside that scope (a personal-brand or consumer video where the above framing would not make sense), ask instead of assuming. Never silently apply someone else's defaults.
+
 ## Prerequisites
 
 - Python 3.9 or newer, which is already on every Mac.
@@ -46,11 +57,7 @@ python3 ~/.claude/skills/video-summary/video_summary.py "<source>" [flags]
 
 Run this whenever I send a video with any instruction beyond the bare link. If I say "summarise" plus anything else, or ask for takeaways, ideas, findings, or what to do with it, that is a Stage 2 request. Only a bare link with no other text stops at Stage 1.
 
-**Default context, assume this unless I say otherwise:**
-- **My team is demand gen**, covering ads, SEO, campaigns, B2B marketing, and AI tooling. Pitch ideas at someone who owns or influences those.
-- **I watch these to find things worth actioning**, so lead with what we could do, not with what the video contained.
-
-Only ask me about team or purpose if the video is clearly outside that scope, for example a personal-brand or consumer video where demand gen framing would not make sense.
+**Use the `MY_TEAM` and `MY_PURPOSE` values from the Configure block above.** Pitch ideas at someone who owns or influences that team's work, and lead with what could be done, not just what the video contained.
 
 **Always deliver in chat as structured markdown with tables.** Tables for anything comparative: the vendor or section rundown, each idea's detail, and what to skip. Prose only where a caveat needs explaining.
 
