@@ -75,8 +75,11 @@ Only ask me about team or purpose if the video is clearly outside that scope, fo
 **Why:** [the reason I watched it]
 **For:** [which team]
 
-## What the video actually did
-[Three to five bullets, observation only, each with a timestamp. No recommendations here.]
+## Summary
+[Two to three sentences: what the video is and what it covers. No timestamps, no recommendations, just orientation.]
+
+## Key takeaways
+[Three to five bullets, each one a single fact or moment worth remembering, each with a timestamp. Observation only, no recommendations. This replaces a longer scene rundown, so keep each bullet to one line.]
 
 ## Ideas worth discussing
 
