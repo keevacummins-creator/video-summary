@@ -13,14 +13,16 @@ This skill runs in two stages. Stage 1 observes and never infers. Stage 2 interp
 
 ## Configure this for you
 
-Edit the two lines below before using Stage 2 (the team brief). These are the only lines in this file meant to be personal, everything else applies to anyone.
+There is no install step that runs code, so nothing can ask you this when you add the skill. It gets asked the first time you actually use Stage 2 instead, unless you fill in the two lines below yourself first.
 
 ```
 MY_TEAM: demand gen, covering ads, SEO, campaigns, B2B marketing, and AI tooling
 MY_PURPOSE: find what's actionable from a video, not just understand it
 ```
 
-If `MY_TEAM` is blank, or the video is clearly outside that scope (a personal-brand or consumer video where the above framing would not make sense), ask instead of assuming. Never silently apply someone else's defaults.
+If `MY_TEAM` says "(not set)", ask me for it the first time Stage 2 runs, then use my answer for every brief after that in this conversation. Never invent a team or purpose, and never carry over an example value from this file as if it were mine.
+
+**Forking this for someone else?** Clear both lines back to "(not set)" before sharing, so the next person gets asked instead of quietly inheriting these values.
 
 ## Prerequisites
 
