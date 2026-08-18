@@ -16,8 +16,8 @@ This skill runs in two stages. Stage 1 observes and never infers. Stage 2 interp
 There is no install step that runs code, so nothing can ask you this when you add the skill. It gets asked the first time you actually use Stage 2 instead, unless you fill in the two lines below yourself first.
 
 ```
-MY_TEAM: demand gen, covering ads, SEO, campaigns, B2B marketing, and AI tooling
-MY_PURPOSE: find what's actionable from a video, not just understand it
+MY_TEAM: (not set)
+MY_PURPOSE: (not set)
 ```
 
 If `MY_TEAM` says "(not set)", ask me for it the first time Stage 2 runs, then use my answer for every brief after that in this conversation. Never invent a team or purpose, and never carry over an example value from this file as if it were mine.
@@ -67,6 +67,7 @@ Run this whenever I send a video with any instruction beyond the bare link. If I
 
 ### Rules for the brief
 
+- **Idea names are headlines, nothing else.** Two to five words, plain noun phrase, full stop. Never append a clause after it — no ", not a one-off", no ", skip the manual pull", no explanatory tail of any kind. If it needs explaining, that's what the "what we would do" column is for.
 - **Every idea traces to a timestamp.** No idea appears without the `MM:SS` observation it came from. This is what makes it defensible in a room. If someone pushes back, I can scrub to the moment and show them.
 - **Separate observed from recommended.** Never blur what the video did with what we should do. Label them.
 - **Three to five ideas, not ten.** A list nobody can act on is a list nobody acts on. Cut to what is genuinely worth discussing.
@@ -92,15 +93,10 @@ Run this whenever I send a video with any instruction beyond the bare link. If I
 
 ## Ideas worth discussing
 
-### 1. [Plain name for the idea]
-- **Seen at:** `[MM:SS]` [the specific observation this comes from]
-- **What we would do:** [concrete action, not a theme]
-- **Effort:** [Small / Medium / Large, and what it actually takes]
-- **The bet:** [what has to be true for this to work, stated honestly]
-- **Suggested owner:** [function, not a named person]
-
-### 2. [...]
-(three to five total)
+| # | Idea | Seen at | What we would do | Effort | The bet | Owner |
+|---|------|---------|-------------------|--------|---------|-------|
+| 1 | [Headline only — two to five words, a plain noun phrase, nothing appended after it] | `[MM:SS]` | [concrete action, not a theme] | [Small / Medium / Large, and what it actually takes] | [what has to be true for this to work, stated honestly] | [function, not a named person] |
+(three to five rows total)
 
 ## What I would not copy
 - [thing] — [why it would not work for us]
@@ -120,4 +116,4 @@ Run this whenever I send a video with any instruction beyond the bare link. If I
 - A private, unlisted, or age-restricted link cannot be read from the URL. Tell me to download the file and pass the path instead.
 - Keep my local video files local. Never upload anything I did not point you at.
 - In Stage 2, never present an inference as an observation. If an idea rests on something you are guessing at, say which part is a guess.
-- Before showing a Stage 2 brief, reread it for these specific patterns and rewrite any that appear: closing kickers (a punchy restated line ending a section), "X isn't Y, it's Z" contrast couplets, vague filler nouns ("the thing", "the one that"), and throat-clearing intros like "worth flagging" or "here's the thing". Say the plain fact once, then stop. This applies to every section, not just the hook or takeaway.
+- Before showing a Stage 2 brief, reread it for these specific patterns and rewrite any that appear: closing kickers (a punchy restated line ending a section), "X isn't Y, it's Z" contrast couplets, appended qualifier clauses on idea headlines (", not a one-off", ", skip the manual pull"), vague filler nouns ("the thing", "the one that"), and throat-clearing intros like "worth flagging" or "here's the thing". Say the plain fact once, then stop. This applies to every section, not just the hook or takeaway.

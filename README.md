@@ -15,17 +15,27 @@ No packages to install — the script uses only the Python standard library.
 
 ## Install as a Claude Code skill
 
+Open **Terminal** (Mac: press `Cmd + Space`, type `Terminal`, press Return) and run:
+
 ```bash
 mkdir -p ~/.claude/skills/video-summary
 cp SKILL.md video_summary.py ~/.claude/skills/video-summary/
 ```
 
-Then set your API key so it persists across terminal sessions:
+Then get a free key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey) — it starts with `AIzaSy`, not a longer OAuth-style token — and save it so it's there every time you open Terminal, not just this session:
 
 ```bash
-echo 'export GEMINI_API_KEY="your-key-here"' >> ~/.zshrc
+echo 'export GEMINI_API_KEY="AIzaSy-your-real-key-here"' >> ~/.zshrc
 source ~/.zshrc
 ```
+
+Replace `AIzaSy-your-real-key-here` with your actual key before running that line. Check it saved correctly:
+
+```bash
+cat ~/.zshrc
+```
+
+You should see the `export GEMINI_API_KEY=...` line printed back. If it's not there, the `echo` command above didn't run — try it again in a fresh Terminal window.
 
 Claude Code will pick up the skill automatically. Paste a video link or file path and ask what's in it, what happened, or to turn it into a plan.
 
