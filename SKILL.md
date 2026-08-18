@@ -108,3 +108,4 @@ Only ask me about team or purpose if the video is clearly outside that scope, fo
 - A private, unlisted, or age-restricted link cannot be read from the URL. Tell me to download the file and pass the path instead.
 - Keep my local video files local. Never upload anything I did not point you at.
 - In Stage 2, never present an inference as an observation. If an idea rests on something you are guessing at, say which part is a guess.
+- Before showing a Stage 2 brief, reread it for these specific patterns and rewrite any that appear: closing kickers (a punchy restated line ending a section), "X isn't Y, it's Z" contrast couplets, vague filler nouns ("the thing", "the one that"), and throat-clearing intros like "worth flagging" or "here's the thing". Say the plain fact once, then stop. This applies to every section, not just the hook or takeaway.
