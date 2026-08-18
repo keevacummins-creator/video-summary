@@ -1,6 +1,6 @@
 ---
 name: video-summary
-description: Watch and analyze any video — a YouTube link or a local file. Reads the actual frames and audio, not just the transcript, and returns a scene-by-scene breakdown with timestamps, a full transcript, on-screen captions, structure, and pacing. Can also turn that analysis into a team brief: concrete ideas to bring to a team meeting, each traceable to a timestamp, with effort, owner, and one decision to make. Use whenever a video link or file path is given and the request is to understand, summarize, break down, or extract takeaways from what's in it.
+description: Watch and analyze any video — a YouTube link or a local file. Reads the frames and audio, not the transcript, and returns a scene-by-scene breakdown with timestamps, a full transcript, on-screen captions, structure, and pacing. Can also turn that analysis into a team brief: concrete ideas to bring to a team meeting, each traceable to a timestamp, with effort, owner, and one decision to make. Use whenever a video link or file path is given and the request is to understand, summarize, break down, or extract takeaways from what's in it.
 argument-hint: <youtube-url-or-file-path> [--clip 0:00-0:05] [--fps 8] [--prompt "..."]
 allowed-tools: Bash, Read
 ---
@@ -13,7 +13,7 @@ This skill runs in two stages. Stage 1 observes and never infers. Stage 2 interp
 
 ## Configure this for you
 
-There is no install step that runs code, so nothing can ask you this when you add the skill. It gets asked the first time you actually use Stage 2 instead, unless you fill in the two lines below yourself first.
+There is no install step that runs code, so nothing can ask you this when you add the skill. It gets asked the first time you use Stage 2 instead, unless you fill in the two lines below yourself first.
 
 ```
 MY_TEAM: (not set)
@@ -35,7 +35,7 @@ If `MY_TEAM` says "(not set)", ask me for it the first time Stage 2 runs, then u
 1. Read the arguments I gave you:
    - **source** (required): a YouTube URL, or a path to a local video file
    - **--clip** (optional): analyze only part of it, like `0:00-0:05`
-   - **--fps** (optional): how many frames per second to actually look at, default 1
+   - **--fps** (optional): how many frames per second to look at, default 1
    - **--prompt** (optional): ask one specific thing instead of the full report
    - **--model** (optional): defaults to the current Gemini Flash
 
@@ -51,7 +51,7 @@ If `MY_TEAM` says "(not set)", ask me for it the first time Stage 2 runs, then u
 python3 ~/.claude/skills/video-summary/video_summary.py "<source>" [flags]
 ```
 
-4. Show me the report as it came back. Do not summarize it away, do not renumber or round the timestamps, and do not add anything the analysis did not actually return.
+4. Show me the report as it came back. Do not summarize it away, do not renumber or round the timestamps, and do not add anything the analysis did not return.
 
 5. If it errors, the script prints the exact fix underneath the error. Give me that one command instead of guessing at it.
 
@@ -86,7 +86,7 @@ Run this whenever I send a video with any instruction beyond the bare link. If I
 **For:** [which team]
 
 ## Summary
-[Two to three sentences: what the video is and what it covers. No timestamps, no recommendations, just orientation.]
+[Two to three sentences: what the video is and what it covers. No timestamps, no recommendations. Orientation only.]
 
 ## Key takeaways
 [Three to five bullets, each one a single fact or moment worth remembering, each with a timestamp. Observation only, no recommendations. This replaces a longer scene rundown, so keep each bullet to one line.]
@@ -95,7 +95,7 @@ Run this whenever I send a video with any instruction beyond the bare link. If I
 
 | # | Idea | Seen at | What we would do | Effort | The bet | Owner |
 |---|------|---------|-------------------|--------|---------|-------|
-| 1 | [Headline only — two to five words, a plain noun phrase, nothing appended after it] | `[MM:SS]` | [concrete action, not a theme] | [Small / Medium / Large, and what it actually takes] | [what has to be true for this to work, stated honestly] | [function, not a named person] |
+| 1 | [Headline only — two to five words, a plain noun phrase, nothing appended after it] | `[MM:SS]` | [concrete action, not a theme] | [Small / Medium / Large, and what it takes] | [what has to be true for this to work, stated honestly] | [function, not a named person] |
 (three to five rows total)
 
 ## What I would not copy
@@ -110,7 +110,7 @@ Run this whenever I send a video with any instruction beyond the bare link. If I
 
 ## Rules, do not break these
 
-- Only describe what is actually in the video. Never invent a creator, a speaker, a brand, a statistic, or a quote.
+- Only describe what is in the video. Never invent a creator, a speaker, a brand, a statistic, or a quote.
 - Never invent a voiceover. Plenty of videos are silent, music only, or ambient noise only, and that is normal. Say so instead of filling the gap.
 - Use only the timestamps the analysis returned. Never estimate or round one to look tidy.
 - A private, unlisted, or age-restricted link cannot be read from the URL. Tell me to download the file and pass the path instead.

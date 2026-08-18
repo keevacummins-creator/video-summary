@@ -39,14 +39,14 @@ MIME = {
 DEFAULT_PROMPT = """Analyze this video and return a structured markdown report using the exact sections below.
 
 ACCURACY RULES - these override everything else:
-1. Report only what is actually in the video. Do not infer, guess, or fill in plausible-sounding detail.
+1. Report only what is in the video. Do not infer, guess, or fill in plausible-sounding detail.
 2. Never invent a creator, presenter, narrator, or speaker name. If no name is shown on screen or clearly spoken, say the video has no identified creator.
 3. Never fabricate a voiceover, dialogue, or transcript. Many videos are silent or have music only, and that is normal. If there is no speech, say "No speech detected."
 4. Separate what you SEE from what you INFER. Label anything inferred with "(inferred)".
 5. Use only real timestamps taken from the video. Never estimate or invent one.
 
 ## Summary
-Two to four sentences on what actually happens and who the video is for.
+Two to four sentences on what happens and who the video is for.
 
 ## Scene-by-Scene Breakdown
 Walk the video in order with `MM:SS` timestamps for every distinct cut, scene, or beat. For each one give:
@@ -56,10 +56,10 @@ Walk the video in order with `MM:SS` timestamps for every distinct cut, scene, o
 - the cut or transition that ends the beat
 
 ## Audio
-Report only what you actually hear. Valid answers include "No audio track present", "Silent - no speech, music, or effects detected", "Music only: [describe]", or a verbatim transcript with `MM:SS` timestamps if speech is genuinely present.
+Report only what you hear. Valid answers include "No audio track present", "Silent - no speech, music, or effects detected", "Music only: [describe]", or a verbatim transcript with `MM:SS` timestamps if speech is present.
 
 ## On-Screen Text and Visuals
-Every caption, title card, or overlay, quoted verbatim with its timestamp. Then the caption style, the text placement, and any branding or products actually shown.
+Every caption, title card, or overlay, quoted verbatim with its timestamp. Then the caption style, the text placement, and any branding or products shown.
 
 ## Structure
 Identify these four beats with timestamps, and say plainly if one is missing:
@@ -72,10 +72,10 @@ Identify these four beats with timestamps, and say plainly if one is missing:
 Average seconds per cut, the total number of cuts, and where the pace changes.
 
 ## Key Moments
-Three to seven `[MM:SS] Description` bullets a viewer would actually remember.
+Three to seven `[MM:SS] Description` bullets a viewer would remember.
 
 ## Replicable Techniques
-Describe HOW the video was made, mechanically, so the techniques could be repeated. Stay descriptive, do not recommend anything here. Cover only what you can actually see or hear:
+Describe HOW the video was made, mechanically, so the techniques could be repeated. Stay descriptive, do not recommend anything here. Cover only what you can see or hear:
 - caption treatment: burned-in or platform, words per line, placement, when they appear relative to speech
 - shot construction: framing, camera movement, lighting, setting, whether it is a single take
 - editing: cut rhythm, b-roll usage, zooms or punch-ins and where they land

@@ -1,6 +1,6 @@
 # video-summary
 
-A [Claude Code](https://claude.com/claude-code) skill that actually watches a video — the real frames and the real audio, not just a transcript — and returns a scene-by-scene breakdown: timestamps, on-screen captions quoted verbatim, structure, pacing, and a full transcript when speech is present.
+A [Claude Code](https://claude.com/claude-code) skill that watches a video — the frames and the audio, not a transcript — and returns a scene-by-scene breakdown: timestamps, on-screen captions quoted verbatim, structure, pacing, and a full transcript when speech is present.
 
 Works on a YouTube link or a local video file. Handles anything from short-form video (ads, Reels, TikToks) to long-form talks, podcasts, tutorials, and meeting recordings.
 
@@ -61,7 +61,7 @@ A private, unlisted, or age-restricted YouTube link can't be read from the URL �
 
 ## Accuracy
 
-The prompt is written to refuse to fill gaps: no invented speakers, no invented voiceover on silent or music-only clips, no rounded timestamps. If something isn't actually in the video, the report says so instead of guessing.
+The prompt is written to refuse to fill gaps: no invented speakers, no invented voiceover on silent or music-only clips, no rounded timestamps. If something isn't in the video, the report says so instead of guessing.
 
 ## Licence
 
